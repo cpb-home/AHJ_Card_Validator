@@ -1,0 +1,58 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: darkkhaki;
+  padding-top: 30px;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.cardsBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardsBlockHeader {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.cardsSamples {
+  display: flex;
+  gap: 2px;
+}
+
+.cardsSamplesItem {
+  width: 39px;
+  height: 25px;
+}
+
+.cardsSamplesItem img {
+  width: 100%;
+}
+
+.cardsSamplesEntry {
+  display: flex;
+}
+
+.cardsSamplesInput {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.cardsSamplesBtn {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  font-size: 16px;
+}
