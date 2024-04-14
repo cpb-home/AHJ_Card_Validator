@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: darkkhaki;
+  background-color: lightcyan;
   padding-top: 30px;
 }
 
@@ -13,7 +13,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 50px auto;
   max-width: 600px;
 }
 
@@ -30,11 +30,20 @@ body {
 .cardsSamples {
   display: flex;
   gap: 2px;
+  margin-bottom: 10px;
 }
 
 .cardsSamplesItem {
   width: 39px;
   height: 25px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.cardsSamplesItemActive {
+  justify-content: flex-start;
 }
 
 .cardsSamplesItem img {
@@ -43,11 +52,28 @@ body {
 
 .cardsSamplesEntry {
   display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 .cardsSamplesInput {
-  padding: 10px;
+  padding: 5px;
   font-size: 16px;
+  border: 0;
+  outline: 1px solid rgb(206, 206, 206);
+  border-radius: 5px;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+  }
+}
+
+.cardsSamplesInput:focus {
+  border: 0;
+  outline: 1px solid rgb(206, 206, 206);
+  
 }
 
 .cardsSamplesBtn {
@@ -55,4 +81,24 @@ body {
   background-color: #5cb85c;
   border-color: #4cae4c;
   font-size: 16px;
+  padding: 5px;
+}
+
+.cardsSamplesBtn:hover {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.messageBox {
+  font-size: 20px;
+  padding: 10px 0;
+  font-weight: bold;
+}
+
+.resultTruthy {
+  color: green;
+}
+
+.resultFalsy {
+  color: red;
 }
