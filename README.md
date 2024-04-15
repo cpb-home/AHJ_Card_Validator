@@ -1,3 +1,3 @@
-#AJS Unit-tests homework. Clean functions task.
+#AHJ_Card_Validator
 
-[![Build status](https://ci.appveyor.com/api/projects/status/6s877kl93fmv5x20?svg=true)](https://ci.appveyor.com/project/cpb-home/ahj-dom)
+[![Build status](https://ci.appveyor.com/api/projects/status/3h2bnemmk2visx4e?svg=true)](https://ci.appveyor.com/project/cpb-home/ahj-card-validator)
