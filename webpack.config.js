@@ -5,6 +5,10 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  devServer: {
+    port: 9000
+  },
+  devtool: 'source-map',
   output: {
     path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'img/[hash][ext][query]'

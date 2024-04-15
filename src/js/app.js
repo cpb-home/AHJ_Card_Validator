@@ -5,7 +5,6 @@ window.addEventListener("DOMContentLoaded", function() {
 let timeoutId = 0;
 
 function createCardsBlock() {
-  let result;
   const root = document.querySelector('#root');
   const cardsBlock = getCardsBlock();
   const cardsBlockHeader = getCardBlockHeader();
@@ -41,7 +40,7 @@ function getCardsSamples() {
   const cardsSamplesBlock = document.createElement('div');
   cardsSamplesBlock.classList.add('cardsSamples');
 
-  cardList = [
+  const cardList = [
     {system: 'Visa', img: 'https://www.validcreditcardnumber.com/static/img/card-visa.gif'},
     {system: 'MasterCard', img: 'https://www.validcreditcardnumber.com/static/img/card-mastercard.gif'},
     {system: 'AmericanExpress', img: 'https://www.validcreditcardnumber.com/static/img/card-amex.gif'},
@@ -96,7 +95,7 @@ function addEntringListener() {
   const input = document.querySelector('.cardsSamplesInput');
 
   if (input) {
-    input.addEventListener('input', e => {
+    input.addEventListener('input', () => {
       if (input.value.length > 19) {
         input.value = input.value.substring(0,19);
       }
@@ -110,7 +109,7 @@ function checkCardListener() {
   const cards = document.querySelectorAll('.cardsSamplesItem');
 
   if (btn && input) {
-    btn.addEventListener('click', e => {
+    btn.addEventListener('click', () => {
       
       if (cards) {
         cards.forEach(el => el.classList.remove('cardsSamplesItemActive'));
@@ -178,7 +177,7 @@ function checkCardNumber(num) {
       mess = 'Не удалось определить эмитента карты';
     }
   } else {
-    res = false;
+    result = false;
     mess = 'Неверный номер карты'
   }
   return {result: result, mess: mess, style: style};
